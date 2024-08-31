@@ -1,0 +1,358 @@
+/*regular*/
+@font-face {
+	font-family: 'Montserrat-Regular'; 
+	src: local('Montserrat-Regular'),
+		url(/fonts/Montserrat/Montserrat-Regular.ttf); 
+}
+/*bold*/
+@font-face {
+	font-family: 'Montserrat-Bold';
+  font-style: normal;
+	font-weight: bold; 
+	src: local('Montserrat-Bold'),
+		url(/fonts/Montserrat/Montserrat-Bold.ttf); 
+}
+
+@font-face {
+	font-family: 'Material Icons';
+  font-style: normal;
+	font-weight: 400; 
+	src: local('Material Icons'),
+		url(/fonts/material-design-icons/MaterialIcons-Regular.ttf); 
+}
+
+@font-face {
+	font-family: 'Font_Awesome_5_Brands';
+  font-style: normal;
+	font-weight: 400; 
+	src: local('Font_Awesome_5_Brands'),
+		url(/fonts/Font_Awesome_5_Brands/fa-brands-400.ttf); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat-Regular;
+}
+body {
+  width: 1440px;
+  margin: 0 auto;
+}
+.logo {
+  margin-left: 140px;
+  display: flex;
+  align-items: center;
+  .toxin {
+    margin-left: 12.5px;
+  }
+}
+a {
+  text-decoration: none;
+}
+.header {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 10px 20px 0px rgba(31, 32, 65, 0.05);
+  .btns {
+    width: 303px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+  }
+  .navbar {
+    list-style: none;
+    display: flex;
+    width: 447px;
+    height: 21px;
+    margin-left: 284px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+    justify-content: space-between;
+    .about{
+      font-family: Montserrat-Bold;
+      font-size: 14px;
+      line-height: 18px;
+      color: rgba(31, 32, 65, 0.75);
+    }
+  }
+  .btn {
+    cursor: pointer;
+    font-family: Montserrat-Bold;
+    font-size: 12px;
+  }
+  .sign {
+    color: rgba(188, 156, 255, 1);
+    border-radius:40px;
+    line-height: 14.63px;
+    border: 2px double transparent;
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)), radial-gradient(circle at left top, rgba(188, 156, 255, 1), rgba(139, 164, 249, 1));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    padding: 8px 18px;
+  }
+  .registration {
+    background-image: linear-gradient(to bottom, rgba(188, 156, 255, 1), rgba(139, 164, 249, 1));
+    border: 0;
+    line-height: 14.63px;
+    padding: 10px 20px;
+    border-radius:40px;
+    color: rgba(255, 255, 255, 1);
+  } 
+}
+.services {
+  display: flex;
+}
+.agreements {
+  display: flex;
+}
+.material-icons {
+  color: rgba(31, 32, 65, 0.5);
+  font-family: Material Icons;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 20.4px;
+  text-align: center;
+}
+.main {
+  height: 830px;
+  position: relative;
+  background: url("http://127.0.0.1:5500/src/imgs/image_3.jpeg")
+}
+.footer {
+  display: flex;
+  height: 372px;
+  box-shadow: 0px 1px 0px 0px rgba(31, 32, 65, 0.1);
+  .logo{
+    margin: 0;
+  }
+  .comment{
+    margin-left: 140px;
+    margin-top: 102px;
+    width: 260px;
+    .text_comment{
+      font-family: Montserrat;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: left;
+      color: rgba(31, 32, 65, 0.75);
+      width: 260px;
+      margin-top: 20px;
+    }
+  }
+  .lists{
+    display: flex;
+    list-style: none;
+    .navigation {
+      margin-left: 40px;
+    }
+    .about {
+      margin-left: 57px;
+    }
+    .support {
+      margin-left: 92px;
+    }
+    .subscribe {
+      margin-left: 51px;
+    }
+    .list{
+      list-style: none;
+      margin-top: 102px;
+      color: rgba(31, 32, 65, 0.5);
+      font-size: 14px;
+      
+      :first-child {
+        font-family: Montserrat-Bold;
+        color: rgba(31, 32, 65, 1);
+        font-size: 12px;
+      }
+      li {
+        margin-bottom: 21px;
+        max-width: 260px;
+      }
+      :last-child {
+        margin-bottom: 0;
+      }
+      .mailing {
+        line-height: 24px;
+      }
+    }
+  }
+}
+.form{
+  display: flex;
+  align-items: center;
+  .email {
+    font-family: Montserrat-Regular;
+    width: 260px;
+    height: 43px;
+    border:1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    &::placeholder {
+      font-family: Montserrat-Regular;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: left;
+      color:rgba(31, 32, 65, 0.25);
+      padding-left: 15px;
+    }
+  }
+  .arrow-forward{
+    padding: 11.5px 10px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 156, 255, 1)), to(rgba(139, 164, 249, 1)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: -44px;
+
+    
+  }
+}
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  height:70px;
+  box-shadow: 0px 10px 20px 0px rgba(31, 32, 65, 0.05);
+  p {
+    margin-left: 140px;
+    align-content: center;
+    color: rgba(31, 32, 65, 0.75);
+    line-height: 17.07px;
+    font-size: 14px;
+  }
+  .social-sites {
+    list-style: none;
+    display: flex;
+    font-size: 24px;
+    width: 112px;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 140px;
+    li span {
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(188, 156, 255, 1)), to(rgba(139, 164, 249, 1)));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+.twitter::before {
+  font-family: Font_Awesome_5_Brands;
+  content: "\F099";
+}
+.facebook::before {
+  font-family: Font_Awesome_5_Brands;
+  content: "\F082";
+}
+.instagram::before {
+  font-family: Font_Awesome_5_Brands;
+  content: "\F16D";
+}
+
+.num-sel-form {
+  width: 379px;
+  height: 372px;
+  border-radius: 4px;
+  border: 1px solid #0000001F;
+  background: #FFFFFF;
+  margin-left: 140px;
+  margin-top: 70px;
+  position: absolute;
+  box-shadow: 0px 0px 25px 0px #00000033;
+  h1 {
+    width: 320px;
+    color: #1F2041;
+    font-family: Montserrat-Bold;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.26px;
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 40px;
+  }
+  form{
+    .dates{
+      display: flex;
+      margin-left: 30px;
+      margin-top: 21px;
+      .arrival {
+        width: 150px;
+        .input-arrival {
+          width: 100%;
+          height:44px;
+          border: 1px solid #1F204140;
+          border-radius: 4px;
+        }
+      }
+
+      .departure {
+        width: 150px;
+        margin-left: 20px;
+        .input-departure {
+          width: 100%;
+          height:44px;
+          border: 1px solid #1F204140;
+          border-radius: 4px;
+        }
+      }
+    }
+    h3 {
+      color: #1F2041;
+      font-family: Montserrat-Bold;
+      font-size: 12px;
+      line-height: 14.63px;
+      text-align: left;
+      margin-bottom: 5px;
+    }
+    .guests{
+      width: 320px;
+      margin-left: 30px;
+      margin-top: 20px;
+      .input-guests {
+        width: 100%;
+        height:44px;
+        border: 1px solid #1F204140;
+        border-radius: 4px;
+      } 
+    }
+    .btn {
+      margin-left: 30px;
+      margin-top: 30px;
+      position: relative;
+      button {
+        display: flex;
+        background-image: linear-gradient(to bottom, rgba(188, 156, 255, 1), rgba(139, 164, 249, 1));
+        border: 0;
+        border-radius:40px;
+        width:320px;
+        align-items: center;
+        color: #FFFFFF;
+        font-family: Montserrat-Bold;
+        font-size: 12px;
+        line-height: 14.63px;
+        text-align: center;
+        align-self: center;
+        justify-content: center;
+        height: 44px;
+        &#text {
+          align-items: center;
+          color: #FFFFFF;
+          font-family: Montserrat-Bold;
+          font-size: 12px;
+          line-height: 14.63px;
+          text-align: center;
+          align-self: center;
+          justify-content: center;
+          height: 44px;
+        }
+        .arrow-forward {
+          position: absolute;
+          color: #FFFFFF;
+          margin-left: 277px;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
