@@ -2,15 +2,20 @@
 <html>
   <head>
     <title>Toxin</title>
-    <style>/* Font-face declarations */
+    <style>@charset "UTF-8";
+/* Font-face declarations */
 @font-face {
   font-family: 'Montserrat-Regular';
   src: local("Montserrat-Regular"), url(https://bebriks.github.io/MetaLampEx2/src/fonts/Montserrat/Montserrat-Regular.ttf); }
 @font-face {
   font-family: 'Montserrat-Bold';
-  font-style: normal;
-  font-weight: bold;
   src: local("Montserrat-Bold"), url(https://bebriks.github.io/MetaLampEx2/src/fonts/Montserrat/Montserrat-Bold.ttf); }
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: local("Montserrat-Light"), url(https://bebriks.github.io/MetaLampEx2/src/fonts/Montserrat/Montserrat-Light.ttf); }
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: local("Montserrat-Medium"), url(https://bebriks.github.io/MetaLampEx2/src/fonts/Montserrat/Montserrat-Medium.ttf); }
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -33,6 +38,137 @@ body {
 
 a {
   text-decoration: none; }
+
+input {
+  border: 1px solid #1F204140;
+  border-radius: 4px;
+  height: 44px;
+  width: 100%; }
+  input::placeholder {
+    font-family: 'Montserrat-Regular';
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.25);
+    padding-left: 15px; }
+
+input[type=radio] {
+  --s: 20px;
+  /* control the size */
+  --c: #BC9CFF;
+  /* the active color */
+  height: var(--s);
+  aspect-ratio: 1;
+  border: 1px solid #1F204140;
+  padding: 3.0px;
+  background: linear-gradient(to bottom, var(--c), #8BA4F9) 50%/0 0 no-repeat content-box;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  font-size: inherit;
+  transition: .3s; }
+
+input[type=radio]:checked {
+  border: 1px solid var(--c);
+  background-size: 100% 100%;
+  color: #1F2041BF; }
+  input[type=radio]:checked + span {
+    color: #1F2041BF; }
+
+input[type=radio]:disabled {
+  background: linear-gradient(#939393 0 0) 50%/100% 20% no-repeat content-box;
+  opacity: .5;
+  cursor: not-allowed; }
+
+label {
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #1F204180;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer; }
+  label span {
+    margin-left: 10px; }
+
+@media print {
+  input[type=radio] {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+    background: none; } }
+@media print {
+  input[type=radio] {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+    background: none; } }
+.offers {
+  display: flex;
+  padding-bottom: 4px;
+  margin-top: 10px; }
+  .offers p {
+    display: flex;
+    /* Используется Flexbox для выравнивания */
+    font-family: Montserrat-Medium;
+    font-size: 14px;
+    line-height: 15px;
+    text-align: left;
+    color: #1F2041BF;
+    padding-top: 2px;
+    margin-left: 10px; }
+
+.toggle {
+  width: 40px;
+  height: 20px; }
+
+.tgl {
+  display: none; }
+  .tgl, .tgl:after, .tgl:before, .tgl *, .tgl *:after, .tgl *:before, .tgl + .tgl-btn {
+    box-sizing: border-box; }
+    .tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
+      background: none; }
+  .tgl + .tgl-btn {
+    outline: 0;
+    display: block;
+    width: 40px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    user-select: none; }
+    .tgl + .tgl-btn:after, .tgl + .tgl-btn:before {
+      position: relative;
+      display: block;
+      content: "";
+      width: 12px;
+      height: 12px; }
+    .tgl + .tgl-btn:after {
+      left: 0; }
+    .tgl + .tgl-btn:before {
+      display: none; }
+  .tgl:checked + .tgl-btn:after {
+    left: 50%; }
+
+.tgl-flat + .tgl-btn {
+  display: flex;
+  align-items: center;
+  padding-left: 3px;
+  transition: all .2s ease;
+  background: #fff;
+  border: 1px solid #1F204140;
+  border-radius: 2em; }
+  .tgl-flat + .tgl-btn:after {
+    transition: all .2s ease;
+    background: #1F204140;
+    content: "";
+    border-radius: 1em; }
+.tgl-flat:checked + .tgl-btn {
+  border: 1px solid #BC9CFF; }
+  .tgl-flat:checked + .tgl-btn:after {
+    left: 20px;
+    background: linear-gradient(#BC9CFF, #8BA4F9), radial-gradient(circle at left top, #BC9CFF, #8BA4F9); }
 
 /* Logo styles */
 .logo {
@@ -83,6 +219,12 @@ a {
 .registration {
   border-radius: 40px;
   line-height: 14.63px;
+  padding: 8px 16px; }
+
+.sign {
+  padding-right: 20px; }
+
+.registration {
   padding: 8px 18px; }
 
 .do-button {
@@ -115,9 +257,23 @@ a {
 
 /* Main content styles */
 .main {
+  display: flex;
   height: 830px;
   position: relative;
-  background: url("https://bebriks.github.io/MetaLampEx2/src/imgs/image_3.jpeg") no-repeat center; }
+  background: url("https://bebriks.github.io/MetaLampEx2/src/imgs/image_3.jpeg") no-repeat bottom; }
+  .main p {
+    align-content: end;
+    max-width: 297px;
+    max-height: 48px;
+    text-align: right;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    align-self: flex-end;
+    margin-right: 134px;
+    margin-bottom: 20px;
+    color: #1F2041BF; }
 
 /* Footer styles */
 .footer {
@@ -140,16 +296,20 @@ a {
   .footer .lists {
     display: flex;
     list-style: none; }
-    .footer .lists .navigation,
-    .footer .lists .about,
-    .footer .lists .support,
-    .footer .lists .subscribe {
+    .footer .lists .navigation {
       margin-left: 40px; }
+    .footer .lists .about {
+      margin-left: 57px; }
+    .footer .lists .support {
+      margin-left: 92px; }
+    .footer .lists .subscribe {
+      margin-left: 51px; }
     .footer .lists .list {
       list-style: none;
       margin-top: 102px;
       font-size: 14px;
-      color: rgba(31, 32, 65, 0.5); }
+      color: rgba(31, 32, 65, 0.5);
+      line-height: 17.07px; }
       .footer .lists .list :first-child {
         font-family: 'Montserrat-Bold';
         color: #1f2041;
@@ -309,12 +469,32 @@ a {
   border: 1px solid #0000001F;
   background: #FFFFFF;
   border-radius: 4px; }
+  .sign-form .gender-choose {
+    border: none;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px; }
+  .sign-form input {
+    width: 98.9%; }
+  .sign-form .surname {
+    margin-bottom: 10px; }
+  .sign-form .name {
+    margin-bottom: 10px; }
+  .sign-form h3 {
+    font-family: Montserrat-Bold;
+    font-size: 12px;
+    line-height: 14.63px;
+    text-align: left;
+    margin-bottom: 5px; }
+  .sign-form .birth {
+    margin-bottom: 20px; }
   .sign-form h2 {
     font-family: 'Montserrat-Bold';
     width: 320px;
     text-align: start;
     font-size: 24px;
-    color: #1F2041; }
+    color: #1F2041;
+    margin-bottom: 20px; }
   .sign-form .sign-comment {
     display: flex;
     flex-direction: row;
@@ -327,36 +507,22 @@ a {
       line-height: 18px;
       text-align: left;
       color: #000000; }
+  .sign-form .do-button-sign {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 24px;
+    padding-right: 24px; }
   .sign-form .card-do-button {
     margin-top: 20px; }
   .sign-form .email {
-    width: 320px;
-    margin-top: 20px; }
+    width: 320px; }
     .sign-form .email .email-input {
-      border: 1px solid #1F204140;
-      border-radius: 4px;
-      width: 98.5%;
-      height: 44px; }
-      .sign-form .email .email-input::placeholder {
-        font-family: 'Montserrat-Regular';
-        font-size: 14px;
-        line-height: 24px;
-        color: rgba(31, 32, 65, 0.25);
-        padding-left: 15px; }
+      width: 98.5%; }
   .sign-form .password {
     width: 320px;
     margin-top: 10px; }
     .sign-form .password .password-input {
-      border: 1px solid #1F204140;
-      width: 98.5%;
-      height: 44px;
-      border-radius: 4px; }
-      .sign-form .password .password-input::placeholder {
-        font-family: 'Montserrat-Regular';
-        font-size: 14px;
-        line-height: 24px;
-        color: rgba(31, 32, 65, 0.25);
-        padding-left: 15px; }
+      width: 98.5%; }
 
 /* Media queries */
 @media screen and (max-width: 768px) {
@@ -441,6 +607,7 @@ a {
             </div>
           </form>
         </div>
+        <p>Лучшие номера для вашей работы, отдыха и просто вдохновения</p>
       </div>
     </main>
     <footer>

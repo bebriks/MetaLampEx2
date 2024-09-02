@@ -1,0 +1,32 @@
+.sign-form
+  form
+    h2 Регистрация аккаунта
+    .name
+      input.name-input(type="text", placeholder="Имя")
+    .surname
+      input.surname-input(type="text", placeholder="Фамилия")
+    fieldset.gender-choose
+      label(for="man")
+        input(type="radio" id="man" name="drone" value="man" checked)
+        span Мужчина
+      label(for="woman")
+        input(type="radio" id="woman" name="drone" value="woman")
+        span Женщина
+    .birth
+      h3 ДАТА РОЖДЕНИЯ
+      input.date(type="text", placeholder="ДД.ММ.ГГГГ")
+    h3 ДАННЫЕ ДЛЯ ВХОДА В СЕРВИС
+    .email 
+      input.email-input(type="text", placeholder="Email")
+    .password
+      input.password-input(type="text", placeholder="Пароль")
+    .offers
+      .toggle
+        input(class="tgl tgl-flat" id="cb4" type="checkbox")
+        label(class="tgl-btn" for="cb4")
+      p Получать спецпредложения
+    button.card-do-button(type="button") ПЕРЕЙТИ К ОПЛАТЕ
+      span.material-icons.arrow-forward arrow_forward
+    .sign-comment
+      p Уже есть аккаунт на Toxin
+      button.do-button.do-button-sign(type="button") ВОЙТИ 
