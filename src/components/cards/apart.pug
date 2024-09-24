@@ -1,0 +1,19 @@
+- var flats = ['https://github.com/bebriks/MetaLampEx2/blob/main/src/imgs/flats/flat-1/image1.png', 'https://github.com/bebriks/MetaLampEx2/blob/main/src/imgs/flats/flat-2/image2.png']
+.apartment-card 
+  .carousel-container
+    .carousel.my-carousel.carousel--translate
+      - var panels = flats
+      each val in panels
+        img(src=val)
+        input.carousel__activator(type="radio", name="carousel", id=val, checked=(val == panels[0]))
+      each val, idx in panels
+        .carousel__controls
+          label.carousel__control.carousel__control--backward(for=`${(idx == 0) ? panels[panels.length - 1] : panels[idx - 1]}` )
+          label.carousel__control.carousel__control--forward(for= `${(idx == panels.length - 1) ? panels[0] : panels[idx + 1]}`)
+      .carousel__track
+        each val in panels
+          li.carousel__slide
+            h1= val
+      .carousel__indicators
+        each val in panels
+          label.carousel__indicator(for=val)

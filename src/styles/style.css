@@ -42,7 +42,8 @@ body {
   margin: 0 auto; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
 
 input {
   border: 1px solid #1F204140;
@@ -198,13 +199,11 @@ label {
     height: 21px;
     margin-left: 284px;
     font-size: 14px;
-    font-weight: 400;
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
     justify-content: space-between; }
     .header .navbar .about {
-      font-family: 'Montserrat-Bold';
-      color: rgba(31, 32, 65, 0.75); }
+      color: rgba(31, 32, 65, 0.5); }
     .header .navbar .services,
     .header .navbar .agreements {
       display: flex;
@@ -222,15 +221,17 @@ label {
 .do-button,
 .sign,
 .registration {
+  font-family: Montserrat-Medium;
   border-radius: 40px;
   line-height: 14.63px;
-  padding: 8px 16px; }
+  padding: 8px 20px; }
 
 .sign {
-  padding-right: 20px; }
+  padding: 8px 18px;
+  padding-right: 19px; }
 
 .registration {
-  padding: 8px 18px; }
+  padding: 8px 20px; }
 
 .do-button {
   padding: 0;
@@ -388,7 +389,6 @@ label {
   font-family: 'Font_Awesome_5_Brands';
   content: "\F16D"; }
 
-/* Form styles for number selection */
 .num-sel-form {
   width: 379px;
   height: 372px;
@@ -403,42 +403,44 @@ label {
     width: 320px;
     color: #1F2041;
     font-family: 'Montserrat-Bold';
+    font-weight: 900;
     font-size: 24px;
     font-weight: 700;
     line-height: 29.26px;
-    margin-left: 30px;
-    margin-top: 40px; }
+    margin-left: 29px;
+    margin-top: 39px; }
   .num-sel-form form .dates {
     display: flex;
     margin-left: 30px;
     margin-top: 21px; }
     .num-sel-form form .dates .arrival,
     .num-sel-form form .dates .departure {
-      width: 150px; }
+      max-width: 148px; }
       .num-sel-form form .dates .arrival .input-arrival,
       .num-sel-form form .dates .arrival .input-departure,
       .num-sel-form form .dates .departure .input-arrival,
       .num-sel-form form .dates .departure .input-departure {
         width: 100%;
-        height: 44px;
+        height: 42px;
         border: 1px solid #1F204140;
         border-radius: 4px; }
     .num-sel-form form .dates .departure {
-      margin-left: 20px; }
+      margin-left: 22px; }
   .num-sel-form form h3 {
     color: #1F2041;
     font-family: 'Montserrat-Bold';
     font-size: 12px;
     line-height: 14.63px;
     text-align: left;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    font-weight: 900; }
   .num-sel-form form .guests {
-    width: 320px;
+    width: 318px;
     margin-left: 30px;
     margin-top: 20px; }
     .num-sel-form form .guests .input-guests {
       width: 100%;
-      height: 44px;
+      height: 42px;
       border: 1px solid #1F204140;
       border-radius: 4px; }
   .num-sel-form form .btn {
@@ -566,5 +568,220 @@ label {
       footer .copyright .social-sites {
         margin: 0;
         margin-bottom: 140px; } }
+.carousel-container {
+  width: 270px;
+  height: 257.5px;
+  background-color: #000000;
+  /* .carousel__slide:nth-of-type(1),
+  .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(1) {
+    background-image: url("https://unsplash.it/300?random");
+    background-size: cover;
+    background-position: center;
+  }
+  .carousel__slide:nth-of-type(2),
+  .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(2) {
+    background-image: url("https://unsplash.it/600?random");
+    background-size: cover;
+    background-position: center;
+  }
+  .carousel__slide:nth-of-type(3),
+  .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(3) {
+    background-image: url("https://unsplash.it/900?random");
+    background-size: cover;
+    background-position: center;
+  }
+  .carousel__slide:nth-of-type(4),
+  .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(4) {
+    background-image: url("https://unsplash.it/1200?random");
+    background-size: cover;
+    background-position: center;
+  }
+  .carousel__slide:nth-of-type(5),
+  .carousel--thumb .carousel__indicators .carousel__indicator:nth-of-type(5) {
+    background-image: url("https://unsplash.it/1500?random");
+    background-size: cover;
+    background-position: center;
+  } */ }
+  .carousel-container .carousel {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    padding: 0;
+    list-style: none; }
+  .carousel-container .carousel__controls,
+  .carousel-container .carousel__activator {
+    display: none; }
+  .carousel-container .carousel__activator:nth-of-type(1):checked ~ .carousel__track {
+    transform: translateX(0%); }
+  .carousel-container .carousel__activator:nth-of-type(1):checked ~ .carousel__slide:nth-of-type(1) {
+    transition: opacity 0.5s, transform 0.5s;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transform: scale(1); }
+  .carousel-container .carousel__activator:nth-of-type(1):checked ~ .carousel__controls:nth-of-type(1) {
+    display: block;
+    opacity: 1; }
+  .carousel-container .carousel__activator:nth-of-type(1):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(1) {
+    opacity: 1; }
+  .carousel-container .carousel__activator:nth-of-type(2):checked ~ .carousel__track {
+    transform: translateX(-100%); }
+  .carousel-container .carousel__activator:nth-of-type(2):checked ~ .carousel__slide:nth-of-type(2) {
+    transition: opacity 0.5s, transform 0.5s;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transform: scale(1); }
+  .carousel-container .carousel__activator:nth-of-type(2):checked ~ .carousel__controls:nth-of-type(2) {
+    display: block;
+    opacity: 1; }
+  .carousel-container .carousel__activator:nth-of-type(2):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(2) {
+    opacity: 1; }
+  .carousel-container .carousel__activator:nth-of-type(3):checked ~ .carousel__track {
+    transform: translateX(-200%); }
+  .carousel-container .carousel__activator:nth-of-type(3):checked ~ .carousel__slide:nth-of-type(3) {
+    transition: opacity 0.5s, transform 0.5s;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transform: scale(1); }
+  .carousel-container .carousel__activator:nth-of-type(3):checked ~ .carousel__controls:nth-of-type(3) {
+    display: block;
+    opacity: 1; }
+  .carousel-container .carousel__activator:nth-of-type(3):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(3) {
+    opacity: 1; }
+  .carousel-container .carousel__activator:nth-of-type(4):checked ~ .carousel__track {
+    transform: translateX(-300%); }
+  .carousel-container .carousel__activator:nth-of-type(4):checked ~ .carousel__slide:nth-of-type(4) {
+    transition: opacity 0.5s, transform 0.5s;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transform: scale(1); }
+  .carousel-container .carousel__activator:nth-of-type(4):checked ~ .carousel__controls:nth-of-type(4) {
+    display: block;
+    opacity: 1; }
+  .carousel-container .carousel__activator:nth-of-type(4):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(4) {
+    opacity: 1; }
+  .carousel-container .carousel__activator:nth-of-type(5):checked ~ .carousel__track {
+    transform: translateX(-400%); }
+  .carousel-container .carousel__activator:nth-of-type(5):checked ~ .carousel__slide:nth-of-type(5) {
+    transition: opacity 0.5s, transform 0.5s;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transform: scale(1); }
+  .carousel-container .carousel__activator:nth-of-type(5):checked ~ .carousel__controls:nth-of-type(5) {
+    display: block;
+    opacity: 1; }
+  .carousel-container .carousel__activator:nth-of-type(5):checked ~ .carousel__indicators .carousel__indicator:nth-of-type(5) {
+    opacity: 1; }
+  .carousel-container .carousel__control {
+    height: 30px;
+    width: 30px;
+    margin-top: -15px;
+    top: 50%;
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    border-width: 5px 5px 0 0;
+    border-style: solid;
+    border-color: #fafafa;
+    opacity: 0.35;
+    outline: 0;
+    z-index: 3; }
+  .carousel-container .carousel__control:hover {
+    opacity: 1; }
+  .carousel-container .carousel__control--backward {
+    left: 10px;
+    transform: rotate(-135deg); }
+  .carousel-container .carousel__control--forward {
+    right: 10px;
+    transform: rotate(45deg); }
+  .carousel-container .carousel__indicators {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center; }
+  .carousel-container .carousel__indicator {
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    display: inline-block;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0.35;
+    margin: 0 2.5px 0 2.5px; }
+  .carousel-container .carousel__indicator:hover {
+    opacity: 0.75; }
+  .carousel-container .carousel__track {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.5s ease 0s; }
+  .carousel-container .carousel__track .carousel__slide {
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 1; }
+  .carousel-container .carousel__track .carousel__slide:nth-of-type(1) {
+    transform: translateX(0%); }
+  .carousel-container .carousel__track .carousel__slide:nth-of-type(2) {
+    transform: translateX(100%); }
+  .carousel-container .carousel__track .carousel__slide:nth-of-type(3) {
+    transform: translateX(200%); }
+  .carousel-container .carousel__track .carousel__slide:nth-of-type(4) {
+    transform: translateX(300%); }
+  .carousel-container .carousel__track .carousel__slide:nth-of-type(5) {
+    transform: translateX(400%); }
+  .carousel-container .carousel--scale .carousel__slide {
+    transform: scale(0); }
+  .carousel-container .carousel__slide {
+    height: 100%;
+    position: absolute;
+    overflow-y: auto;
+    opacity: 0; }
+  .carousel-container * {
+    box-sizing: border-box; }
+  .carousel-container html,
+  .carousel-container body {
+    background-color: #111;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #fff; }
+  .carousel-container .carousel-container {
+    display: inline-block; }
+  .carousel-container .my-carousel {
+    border-radius: 5px;
+    margin: 30px;
+    margin-left: 0; }
+  .carousel-container .carousel__slide {
+    overflow: hidden; }
+  .carousel-container .carousel--thumb .carousel__indicator {
+    height: 30px;
+    width: 30px; }
+  .carousel-container h1 {
+    font-size: 50px;
+    line-height: 50px;
+    color: #fafafa;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    margin-top: -25px; }
+  .carousel-container .carousel__indicator {
+    background-color: #fafafa; }
 
 /*# sourceMappingURL=style.css.map */
